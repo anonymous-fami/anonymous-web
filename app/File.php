@@ -21,6 +21,12 @@ class File extends Model{
         return $files;
     }
 
+    /** Получение всех файлов для сессии **/
+    public static function getAllFilesForSession($sessionId) {
+        $files = File::where('id_session',$sessionId)->get();
+        return $files;
+    }
+
     /** Создание файла **/
     public static function createFile($data) {
         $file = File::create($data);

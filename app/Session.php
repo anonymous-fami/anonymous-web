@@ -15,7 +15,7 @@ class Session extends Model{
     }
 
     /** Удаление файлов всей сессии **/
-    public static function deleteAllFilesForSession($sessionId) {
+    public static function deleteSession($sessionId) {
         Session::where('id',$sessionId)->delete();
     }
 
