@@ -14,7 +14,19 @@ class VerifyCsrfToken extends BaseVerifier {
 	 */
 	public function handle($request, Closure $next)
 	{
-		return parent::handle($request, $next);
+		if ($this->isReading($request) || $this->excludedRoutes($request) || $this->tokensMatch($request))
+		{
+			return $this->addCookieToResponse($request, $next($request));
+		}
+	}
+
+	protected  function  excludedRoutes ( $request ){
+		$routes  =  [
+			//'deploy'
+		] ;
+		foreach ( $routes  as  $route )
+			if  ( $request -> is ( $route ) ) return  true ;
+		return  false ;
 	}
 
 }
