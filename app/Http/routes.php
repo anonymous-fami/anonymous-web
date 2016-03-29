@@ -6,6 +6,7 @@ Route::get('/login','IndexController@loginPage');//страница входа
 Route::get('/logout','CabinetController@logout');//страница выхода
 Route::get('/registration', 'IndexController@registrationPage');//Страница регистрации нового аккаунта
 Route::get('/api_access', 'CabinetController@apiAccessPage');//Страница доступа по api
+Route::get('/store_results', 'CabinetController@storeResultsPage');//Страница хранилища результатов
 
 
 //POST method
