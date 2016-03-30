@@ -10,7 +10,7 @@
                     </li>
                     <li>
                         <a href="/store_results"><i class="icon-chevron-right"></i> Хранилище результатов</a>
-                    </li>r
+                    </li>
                 </ul>
             </div>
 
@@ -23,7 +23,7 @@
                     <ul>
                         <li>
                             POST <strong>$host/api/save_result?api_key=$api_key</strong><br><br>
-                            === Переменные ===
+                            === Переменные ===<br>
                             -> <b>$host</b> текущий домен (POST)<br>
                             -> <b>$matrix</b> входные данные(матрица) (POST)<br>
                             -> <b>$vector</b> входные данные(пр.часть) (POST)<br>
