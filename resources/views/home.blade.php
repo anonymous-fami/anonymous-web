@@ -10,7 +10,7 @@
                     </li>
                     <li>
                         <a href="/store_results"><i class="icon-chevron-right"></i> Хранилище результатов</a>
-                    </li>
+                    </li>r
                 </ul>
             </div>
 
@@ -22,11 +22,14 @@
                     <h5>Примеры запросов</h5>
                     <ul>
                         <li>
-                            GET <strong>$host/api/save_result?input_file=$input&output_file=$output&api_key=$api_key</strong><br><br>
-                            -> <b>$host</b> текущий домен <br>
-                            -> <b>$input</b> входные данные <br>
-                            -> <b>$output</b> результат <br>
-                            -> <b>$api_key</b> ваш ключ api<br>
+                            POST <strong>$host/api/save_result?api_key=$api_key</strong><br><br>
+                            === Переменные ===
+                            -> <b>$host</b> текущий домен (POST)<br>
+                            -> <b>$matrix</b> входные данные(матрица) (POST)<br>
+                            -> <b>$vector</b> входные данные(пр.часть) (POST)<br>
+                            -> <b>$pribl</b> входные данные(приближение) (POST)<br>
+                            -> <b>$result</b> результат (POST)<br>
+                            -> <b>$api_key</b> ваш ключ api (GET url)<br>
                         </li>
                     </ul>
                 </div>
